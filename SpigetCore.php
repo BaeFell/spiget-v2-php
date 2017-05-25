@@ -32,7 +32,6 @@ class SpigetCore {
 
 		$request = self::$spiget_url . $ending;
 
-		echo "executing on: " . $request . "<br>";
 		$response = @file_get_contents($request, false, $context);
 		if(!isset($response) || is_null($response)) {
 			if(self::throw_errors) {
